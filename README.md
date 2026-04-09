@@ -25,7 +25,8 @@ Docker
 Node.js (App)
 Git & GitHub
 📁 Project Structure
-Terraform-project/
+
+**Terraform-project**/
 │── main.tf
 │── variables.tf
 │── outputs.tf
@@ -38,7 +39,8 @@ Terraform-project/
 │── README.md
 🔐 Terraform Backend Configuration
 
-This project uses remote backend for state management:
+
+This project uses a remote backend for state management:
 
 S3 Bucket: pragati-terraform-state-bucket-12345
 DynamoDB Table: terraform-lock-table
@@ -55,16 +57,22 @@ terraform {
 🚀 How to Run This Project
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/Terraform-project.git
+
 cd Terraform-project
 2️⃣ Initialize Terraform
+
 terraform init
 3️⃣ Validate Configuration
+
 terraform validate
 4️⃣ Plan Infrastructure
+
 terraform plan
 5️⃣ Apply Infrastructure
+
 terraform apply
 🐳 Docker & ECR Steps (if using ECS)
+
 Login to ECR
 aws ecr get-login-password --region ap-south-1 | \
 docker login --username AWS --password-stdin <your-account-id>.dkr.ecr.ap-south-1.amazonaws.com
@@ -72,25 +80,8 @@ Build & Push Image
 docker build -t app .
 docker tag app:latest <ECR-URL>
 docker push <ECR-URL>
-❌ Common Issues Faced (Important)
-1. Backend Not Initialized
-terraform init
-2. Port Already in Use (Node.js)
-lsof -i :3000
-kill -9 <PID>
-3. Git Push Rejected
-git pull origin main --rebase
-git push origin main
-4. EC2 SSH Not Working
-Check Security Group → Port 22 open
-Use correct key pair
-Use correct public IP
-📊 Key Learnings
-Terraform state management using S3 & DynamoDB
-VPC networking concepts (subnets, routing, gateways)
-ECS + ECR integration
-Debugging real-world DevOps issues
-Git conflict resolution & best practices
+
+
 🧹 Cleanup
 
 To destroy all resources:
