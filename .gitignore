@@ -1,0 +1,25 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform lock file (optional keep/remove)
+.terraform.lock.hcl
+
+# AWS credentials
+*.pem
+*.key
+
+# Node
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# Env files
+.env
