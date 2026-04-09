@@ -18,26 +18,14 @@ ECR (for Docker image storage)
 RDS (for database)
 S3 (for Terraform backend state storage)
 DynamoDB (for state locking)
+
+
 ⚙️ Technologies Used
 Terraform
 AWS (ap-south-1)
 Docker
 Node.js (App)
 Git & GitHub
-📁 Project Structure
-
-**Terraform-project**/
-│── main.tf
-│── variables.tf
-│── outputs.tf
-│── provider.tf
-│── backend.tf
-│── vpc.tf
-│── ecs.tf
-│── rds.tf
-│── security_groups.tf
-│── README.md
-🔐 Terraform Backend Configuration
 
 
 This project uses a remote backend for state management:
